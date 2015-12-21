@@ -7,14 +7,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NFU-rh-Mlt">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" id="NFU-rh-Mlt" customClass="SearchResultCell" customModule="StoreSearch" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NFU-rh-Mlt" id="cSS-Hd-2Cm">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="lTN-Dg-1Wd">
+                        <rect key="frame" x="15" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="FbV-Ag-OW2"/>
+                            <constraint firstAttribute="width" constant="60" id="ukG-oY-1vZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6Q-f0-qBD">
+                        <rect key="frame" x="90" y="15" width="222" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ub-hJ-hv7">
+                        <rect key="frame" x="90" y="44" width="222" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="l6Q-f0-qBD" firstAttribute="top" secondItem="cSS-Hd-2Cm" secondAttribute="top" constant="15" id="00Y-hi-azt"/>
+                    <constraint firstItem="l6Q-f0-qBD" firstAttribute="leading" secondItem="lTN-Dg-1Wd" secondAttribute="trailing" constant="15" id="HSx-Br-yHU"/>
+                    <constraint firstItem="lTN-Dg-1Wd" firstAttribute="top" secondItem="cSS-Hd-2Cm" secondAttribute="top" constant="10" id="IhL-ph-zh9"/>
+                    <constraint firstItem="lTN-Dg-1Wd" firstAttribute="leading" secondItem="cSS-Hd-2Cm" secondAttribute="leading" constant="15" id="U52-ht-TKo"/>
+                    <constraint firstItem="2Ub-hJ-hv7" firstAttribute="leading" secondItem="lTN-Dg-1Wd" secondAttribute="trailing" constant="15" id="ZUe-Vp-xkk"/>
+                    <constraint firstAttribute="bottom" secondItem="2Ub-hJ-hv7" secondAttribute="bottom" constant="17" id="bGF-i2-jun"/>
+                    <constraint firstAttribute="trailing" secondItem="l6Q-f0-qBD" secondAttribute="trailing" constant="8" id="fCB-JT-PBb"/>
+                    <constraint firstAttribute="trailing" secondItem="2Ub-hJ-hv7" secondAttribute="trailing" constant="8" id="g1j-RH-nqF"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="artistNameLabel" destination="2Ub-hJ-hv7" id="h9k-Ha-xZi"/>
+                <outlet property="artworkImageView" destination="lTN-Dg-1Wd" id="ZVU-pV-bav"/>
+                <outlet property="nameLabel" destination="l6Q-f0-qBD" id="1pl-CC-kYu"/>
+            </connections>
             <point key="canvasLocation" x="547" y="336"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Placeholder" width="60" height="60"/>
+    </resources>
 </document>
